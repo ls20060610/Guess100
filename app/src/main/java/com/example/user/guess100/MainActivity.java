@@ -6,7 +6,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
+
+
+    Random a = new Random();
+    float i = a.nextInt(100)+1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +25,14 @@ public class MainActivity extends AppCompatActivity {
         TextView edinput = (TextView) findViewById(R.id.info);
         EditText ednumber = (EditText) findViewById(R.id.number);
         Button edsend = (Button) findViewById(R.id.send);
+
+      float b =Float.parseFloat(edsecert.getText().toString());
+        b = i;
+
+
+
+
+
     }
 
 }
