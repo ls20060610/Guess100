@@ -1,5 +1,6 @@
 package com.example.user.guess100;
 
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -29,7 +30,16 @@ public class MainActivity extends AppCompatActivity {
       float b =Float.parseFloat(edsecert.getText().toString());
         b = i;
 
-
+        float num = Float.parseFloat(ednumber.getText().toString());
+        if (num > b){
+           new AlertDialog.Builder(this)
+                   .setMessage("0" + "~" +num)
+                   .show();
+        }else if(num < b){
+            new AlertDialog.Builder(this)
+            .setMessage(num + "~" + "100")
+             .show();
+        }
 
 
 
